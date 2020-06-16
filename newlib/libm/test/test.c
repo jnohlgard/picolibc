@@ -26,6 +26,7 @@ int inacc;
 
 int redo = 0;
 extern int calc;
+extern int reduce;
 
 #ifdef MALLOC_DEBUG
 extern char **environ;
@@ -36,6 +37,7 @@ int
 main (int ac,
       char **av, char **en)
 {
+  reduce = 0;
 #ifdef MALLOC_DEBUG
   environ = en;
 #endif
@@ -130,9 +132,6 @@ int li;
   count++;
 }
 
-
-
-int reduce = 0;
 
 int strtod_vector = 0;
 
