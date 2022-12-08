@@ -64,6 +64,8 @@ SECTIONS
 		KEEP (*(SORT_BY_NAME(.init) SORT_BY_NAME(.init.*)))
 	} >flash AT>flash :text
 
+	.note.gnu.build-id : { *(.note.gnu.build-id) } >flash AT>flash :text
+
 	.text : {
 
                 /* code */
